@@ -1,9 +1,9 @@
 #!/bin/sh
 
 display_usage() {
-	echo "USB网卡WIFI设置"
-	echo -e "\nUsage: $0 AP名称 密码\n"
-	echo -e "\n例如: $0 OpenWrt 12345678\n"
+	echo "USB WIFI Setting"
+	echo -e "\nUsage: $0 AP-name Password\n"
+	echo -e "\nE.g: $0 OpenWrt 12345678\n"
 }
 # if less than two arguments supplied, display usage
 if [  $# -le 1 ]
@@ -39,7 +39,7 @@ set wireless.default_radio0.wps_pushbutton='0'
 EOF
 uci commit wireless
 
-read -r -p "需要重启，现在执行? [Y/n] " response
+read -r -p "Reboot is required, execute now? [Y/n] " response
 case "$response" in
 	[yY][eE][sS]|[yY])
 		reboot
