@@ -45,8 +45,8 @@ merge_package https://github.com/vernesong/OpenClash/trunk/luci-app-openclash
 merge_package https://github.com/NateLol/luci-app-oled
 merge_package "-b lede https://github.com/pymumu/luci-app-smartdns"
 #merge_package "-b luci https://github.com/xiaorouji/openwrt-passwall"
-merge_package "https://github.com/solomonricky/openwrt-passwall;xtls-wss"
-merge_package "https://github.com/solomonricky/openwrt-passwall;luci-nodns"
+#merge_package "-b luci-nodns https://github.com/solomonricky/openwrt-passwall"
+#merge_package "https://github.com/solomonricky/openwrt-passwall;xtls-wss"
 #merge_package https://github.com/xiaorouji/openwrt-passwall/trunk/brook
 #merge_package https://github.com/xiaorouji/openwrt-passwall/trunk/chinadns-ng
 #merge_package https://github.com/xiaorouji/openwrt-passwall/trunk/trojan-go
