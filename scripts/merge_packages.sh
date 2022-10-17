@@ -49,7 +49,7 @@ merge_package "-b lede https://github.com/pymumu/luci-app-smartdns"
 
 #merge_package "-b luci-nodns https://github.com/solomonricky/openwrt-passwall"
 merge_package "-b xtls-wss https://github.com/solomonricky/openwrt-passwall"
-svn export https://github.com/solomonricky/openwrt-passwall/branches/luci-nodns/luci-app-passwall package/custom/luci-app-passwall
+svn export https://github.com/solomonricky/openwrt-passwall/branches/luci-nodns/luci-app-passwall package/custom/openwrt-passwall/luci-app-passwall
 
 
 #merge_package https://github.com/xiaorouji/openwrt-passwall/trunk/brook
