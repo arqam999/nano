@@ -1,3 +1,5 @@
+########Patches########
+
 config_file_turboacc=`find package/ -follow -type f -path '*/luci-app-turboacc/root/etc/config/turboacc'`
 sed -i "s/option hw_flow '1'/option hw_flow '0'/" $config_file_turboacc
 sed -i "s/option sfe_flow '1'/option sfe_flow '0'/" $config_file_turboacc
@@ -80,11 +82,11 @@ case $status_page in
   *htm)
     line_number_FV=`grep -n 'Firmware Version' $status_page | cut -d: -f 1`
     sed -i '/ver\./d' $status_page
-    sed -i $line_number_FV' a <a href="https://github.com/klever1988/nanopi-openwrt" target="_blank">klever1988/nanopi-openwrt</a> '$strDate $status_page
+    sed -i $line_number_FV' a <a href="http://shp.ee/n8yf7jf" target="_blank">GilaGajet Build</a> <a> | </a><a href="https://t.me/openwrtuser0" target="_blank">Telegram</a> '$strDate $status_page
     ;;
   *js)
     line_number_FV=`grep -m1 -n 'var fields' $status_page | cut -d: -f1`
-    sed -i $line_number_FV' i var pfv = document.createElement('\''placeholder'\'');pfv.innerHTML = '\''<a href="http://shopee.com.my/gilagajet" target="_blank">GilaGajet Build</a> '$strDate"';" $status_page
+    sed -i $line_number_FV' i var pfv = document.createElement('\''placeholder'\'');pfv.innerHTML = '\''<a href="http://shp.ee/n8yf7jf" target="_blank">GilaGajet Build</a> <a> | </a><a href="https://t.me/openwrtuser0" target="_blank">Telegram</a> '$strDate"';" $status_page
     line_number_FV=`grep -n 'Firmware Version' $status_page | cut -d : -f 1`
     sed -i '/Firmware Version/d' $status_page
     sed -i $line_number_FV' a _('\''Firmware Version'\''), pfv,' $status_page
